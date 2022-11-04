@@ -1,0 +1,63 @@
+{
+  "project_info": {
+    "project_number": "981329966049",
+    "project_id": "btsapp-21bd0",
+    "storage_bucket": "btsapp-21bd0.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:981329966049:android:44e60e2e3f8b30d756d8a0",
+        "android_client_info": {
+          "package_name": "com.dirtfy.bts"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "981329966049-htma050t5cjunoc9qjukp63aem3slgbq.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.dirtfy.bts",
+            "certificate_hash": "62b2d4e267e8350d03a6a9ae07548b6bb78e1cba"
+          }
+        },
+        {
+          "client_id": "981329966049-pjgpgp3jds0km7ob5vt68616lde1mv80.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.dirtfy.bts",
+            "certificate_hash": "443bf67fbff0f8adcf123539759d5aad12065791"
+          }
+        },
+        {
+          "client_id": "981329966049-q1cuek3gqesirngmlsd8pg41vo5u4krk.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.dirtfy.bts",
+            "certificate_hash": "3c7a56e20eea565a484f9fac6265b97fc16d28af"
+          }
+        },
+        {
+          "client_id": "981329966049-224d6cho4521h2ncppu6fvcphgvm6l7n.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAdRoML1chLZlRZR2JetG3dVshH7vOyHFE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "981329966049-224d6cho4521h2ncppu6fvcphgvm6l7n.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

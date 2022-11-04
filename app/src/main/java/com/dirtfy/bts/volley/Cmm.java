@@ -24,10 +24,12 @@ public class Cmm {
 
             for(int i = 0;i < routesArray.length();i++){
                 ArrayList<Transit> transitList = new ArrayList<>();
-                JSONArray stepsArray = (JSONArray) routesArray.get(i);
+                JSONObject route = (JSONObject) routesArray.get(i);
+                JSONArray stepsArray = (JSONArray) route.getJSONArray("legs").
+                        getJSONObject(0).getJSONArray("steps");
 
-                for(int j = 0;j < stepsArray.length();i++){
-                    JSONObject unit = (JSONObject) stepsArray.get(i);
+                for(int j = 0;j < stepsArray.length();j++){
+                    JSONObject unit = stepsArray.getJSONObject(j);
                     String mode = unit.getString("travel_mode");
 
                     if(!mode.equals("TRANSIT")) continue;
@@ -49,7 +51,7 @@ public class Cmm {
                     if(type.equals("HEAVY_RAIL"))
                         name = details.getString("trip_short_name");
                     else
-                        name = details.getJSONObject("line").getJSONObject("vehicle").getString("name");
+                        name = details.getJSONObject("line").getString("name");
 
                     Transit newTransit = new Transit(arrivalStop, arrivalTime, departureStop, departureTime, distance, duration, type, name);
                     transitList.add(newTransit);
