@@ -37,20 +37,18 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
 
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
-        Route route = routeArrayList.get(position);
-        ArrayList<Transit> transits = route.getTransitList();
+        Route route = routeArrayList.get(0);
+        Transit t = route.getTransitList().get(position);
 
-        for(Transit t : transits){
-            holder.dep_name_tv.setText(t.getDepartureStop());
-            holder.dep_time_tv.setText(t.getDepartureTime());
-            holder.arr_time_tv.setText(t.getArrivalTime());
-            holder.type_tv.setText(t.getType());
+        holder.dep_name_tv.setText(t.getDepartureStop());
+        holder.dep_time_tv.setText(t.getDepartureTime());
+        holder.arr_time_tv.setText(t.getArrivalTime());
+        holder.type_tv.setText(t.getType());
 
-            if(t.getType().equals("CITY_BUS") || t.getType().equals("BUS"))
-                holder.icon_iv.setImageResource(R.drawable.ic_baseline_directions_bus_filled_24);
-            else
-                holder.icon_iv.setImageResource(R.drawable.ic_baseline_train_24);
-        }
+        if(t.getType().equals("CITY_BUS") || t.getType().equals("BUS"))
+            holder.icon_iv.setImageResource(R.drawable.ic_baseline_directions_bus_filled_24);
+        else
+            holder.icon_iv.setImageResource(R.drawable.ic_baseline_train_24);
     }
 
     @Override

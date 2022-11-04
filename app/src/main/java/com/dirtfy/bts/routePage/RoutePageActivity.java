@@ -19,6 +19,8 @@ public class RoutePageActivity extends AppCompatActivity {
     LinearLayoutManager layoutManager;
     RecyclerViewAdapter adapter;
 
+    public static RoutePageActivity routePageActivity;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -29,5 +31,7 @@ public class RoutePageActivity extends AppCompatActivity {
         recyclerView.setLayoutManager(layoutManager);
         adapter = new RecyclerViewAdapter(routeArrayList, this);
         recyclerView.setAdapter(adapter);
+
+        routePageActivity = this;
     }
 }

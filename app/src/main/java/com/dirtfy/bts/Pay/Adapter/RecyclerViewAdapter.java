@@ -2,6 +2,7 @@ package com.dirtfy.bts.Pay.Adapter;
 
 import android.content.Context;
 import android.content.Intent;
+import android.media.Image;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -43,6 +44,12 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
         holder.tv_arrivetime.setText(route.getTransitList().get(position).getArrivalTime());
         holder.tv_cost.setText(route.getTransitList().get(position).getCost());
         holder.tv_type.setText(route.getTransitList().get(position).getType());
+
+        if(route.getTransitList().get(position).getType().equals("CITY_BUS")
+                || route.getTransitList().get(position).getType().equals("BUS"))
+            holder.iv.setImageResource(R.drawable.ic_baseline_directions_bus_filled_24);
+        else
+            holder.iv.setImageResource(R.drawable.ic_baseline_train_24);
     }
 
     @Override
@@ -56,9 +63,11 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
         public TextView tv_arrivetime;
         public TextView tv_cost;
         public TextView tv_type;
+        ImageView iv;
 
         public Pay_ViewHolder(@NonNull View itemView) {
             super(itemView);
+            iv = itemView.findViewById(R.id.iv_line);
             tv_startstation = itemView.findViewById(R.id.tv_departstation);
             tv_starttime = itemView.findViewById(R.id.start_time);
             tv_arrivetime = itemView.findViewById(R.id.arrive_time);
