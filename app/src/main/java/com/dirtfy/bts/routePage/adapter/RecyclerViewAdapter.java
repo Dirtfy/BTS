@@ -1,5 +1,7 @@
 package com.dirtfy.bts.routePage.adapter;
 
+import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -9,6 +11,7 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.dirtfy.bts.Pay.Pay_procedure;
 import com.dirtfy.bts.R;
 import com.dirtfy.bts.volley.Route;
 import com.dirtfy.bts.volley.Transit;
@@ -18,9 +21,11 @@ import java.util.ArrayList;
 public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapter.ViewHolder> {
 
     ArrayList<Route> routeArrayList;
+    Context context;
 
-    public RecyclerViewAdapter(ArrayList<Route> routeArrayList){
+    public RecyclerViewAdapter(ArrayList<Route> routeArrayList, Context context){
         this.routeArrayList = routeArrayList;
+        this.context = context;
     }
 
     @NonNull
@@ -68,6 +73,13 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
             dep_time_tv = itemView.findViewById(R.id.route_dep_time_tv);
             arr_time_tv = itemView.findViewById(R.id.route_arr_time_tv);
             type_tv = itemView.findViewById(R.id.route_type_tv);
+
+            itemView.setOnClickListener(view -> {
+                int position = getAdapterPosition();
+                Intent it = new Intent(context, Pay_procedure.class);
+                it.putExtra("number", position);
+                context.startActivity(it);
+            });
         }
     }
 }
