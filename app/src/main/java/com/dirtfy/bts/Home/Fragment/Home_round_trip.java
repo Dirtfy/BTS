@@ -17,7 +17,7 @@ public class Home_round_trip extends Fragment {
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        view = inflater.inflate(R.layout.fragment_checkticket, container, false);
+        view = inflater.inflate(R.layout.fragment_round_trip, container, false);
         return view;
     }
 }
