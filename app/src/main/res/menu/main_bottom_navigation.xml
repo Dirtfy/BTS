@@ -13,7 +13,7 @@
         android:id="@+id/bottom_checkticket"
         android:enabled="true"
         android:title="승차권 확인"
-        android:icon="@drawable/ic_launcher_background"
+        android:icon="@drawable/ic_baseline_airplane_ticket_24"
         />
 </menu>
 

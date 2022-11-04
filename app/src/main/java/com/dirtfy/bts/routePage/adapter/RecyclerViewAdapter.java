@@ -7,6 +7,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
@@ -73,10 +74,15 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
             type_tv = itemView.findViewById(R.id.route_type_tv);
 
             itemView.setOnClickListener(view -> {
-                int position = getAdapterPosition();
-                Intent it = new Intent(context, Pay_procedure.class);
-                it.putExtra("number", position);
-                context.startActivity(it);
+                try{
+                    int position = getAdapterPosition();
+                    Intent it = new Intent(context, Pay_procedure.class);
+                    it.putExtra("number", position);
+                    context.startActivity(it);
+
+                } catch (Exception e){
+                    Toast.makeText(context, "앗!", Toast.LENGTH_SHORT).show();
+                }
             });
         }
     }

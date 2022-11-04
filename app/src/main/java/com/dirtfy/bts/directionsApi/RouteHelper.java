@@ -63,6 +63,8 @@ public class RouteHelper {
                 e.printStackTrace();
             } catch (IOException e) {
                 e.printStackTrace();
+            } catch(Exception e){
+                e.printStackTrace();
             }
 
             return receiveMsg;
@@ -174,6 +176,8 @@ public class RouteHelper {
         } catch (ExecutionException e) {
             e.printStackTrace();
         } catch (JSONException e) {
+            e.printStackTrace();
+        } catch(Exception e){
             e.printStackTrace();
         }
 

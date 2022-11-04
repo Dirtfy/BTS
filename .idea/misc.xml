@@ -3,18 +3,12 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/Users/user/BTS/app/src/main/res/drawable/ic_baseline_directions_bus_filled_24.xml" value="0.1165" />
-        <entry key="..\:/Users/user/BTS/app/src/main/res/layout/activity_checkticket.xml" value="0.24114583333333334" />
-        <entry key="..\:/Users/user/BTS/app/src/main/res/layout/activity_main.xml" value="0.1" />
-        <entry key="..\:/Users/user/BTS/app/src/main/res/layout/activity_pay.xml" value="0.24114583333333334" />
-        <entry key="..\:/Users/user/BTS/app/src/main/res/layout/fragment_buyticket.xml" value="0.15028901734104047" />
-        <entry key="..\:/Users/user/BTS/app/src/main/res/layout/fragment_checkticket.xml" value="0.11727456940222898" />
-        <entry key="..\:/Users/user/BTS/app/src/main/res/layout/fragment_home.xml" value="0.197008547008547" />
-        <entry key="..\:/Users/user/BTS/app/src/main/res/layout/fragment_ticketcheck.xml" value="0.1" />
-        <entry key="..\:/Users/user/BTS/app/src/main/res/layout/homefragment.xml" value="0.1" />
-        <entry key="..\:/Users/user/BTS/app/src/main/res/layout/pay_did.xml" value="0.1" />
-        <entry key="..\:/Users/user/BTS/app/src/main/res/layout/pay_recycler_item.xml" value="0.2" />
-        <entry key="..\:/Users/user/BTS/app/src/main/res/menu/main_bottom_navigation.xml" value="0.1" />
+        <entry key="..\:/Project/BTS/app/src/main/res/layout/activity_main.xml" value="0.25364583333333335" />
+        <entry key="..\:/Project/BTS/app/src/main/res/layout/activity_pay.xml" value="0.25364583333333335" />
+        <entry key="..\:/Project/BTS/app/src/main/res/layout/activity_route_page.xml" value="0.2390625" />
+        <entry key="..\:/Project/BTS/app/src/main/res/layout/pay_recycler_item.xml" value="0.25364583333333335" />
+        <entry key="..\:/Project/BTS/app/src/main/res/layout/route_page_recyclerview_item.xml" value="0.25364583333333335" />
+        <entry key="..\:/Project/BTS/app/src/main/res/menu/main_bottom_navigation.xml" value="0.1" />
       </map>
     </option>
   </component>

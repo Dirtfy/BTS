@@ -58,6 +58,8 @@ public class Home_one_way extends Fragment {
                     startActivity(it);
                 } catch (JSONException e) {
                     e.printStackTrace();
+                } catch(Exception e){
+                    e.printStackTrace();
                 }
             }
         });
