@@ -27,7 +27,7 @@ public class RoutePageActivity extends AppCompatActivity {
         recyclerView = findViewById(R.id.route_page_recyclerView);
         layoutManager = new LinearLayoutManager(this);
         recyclerView.setLayoutManager(layoutManager);
-        adapter = new RecyclerViewAdapter(routeArrayList);
+        adapter = new RecyclerViewAdapter(routeArrayList, this);
         recyclerView.setAdapter(adapter);
     }
 }
