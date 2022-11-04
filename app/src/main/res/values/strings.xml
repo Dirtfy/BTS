@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">BTS</string>
+    <string name="home_buyticket_tabname_one_way">편도</string>
+    <string name="home_buyticket_tabname_round_trip">왕복</string>
 </resources>

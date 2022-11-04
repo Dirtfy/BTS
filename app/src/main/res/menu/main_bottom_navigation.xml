@@ -1,0 +1,22 @@
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!--    하단바에 들어갈 문자들 설정 -->
+    <item
+        android:id="@+id/bottom_buyticket"
+        android:enabled="true"
+        android:title="승차권 예매"
+        android:icon="@drawable/ic_baseline_train_24"
+        android:checked="true"/>
+
+    <item
+        android:id="@+id/bottom_checkticket"
+        android:enabled="true"
+        android:title="승차권 확인"
+        android:icon="@drawable/ic_launcher_background"
+        />
+</menu>
+
+
+
+
