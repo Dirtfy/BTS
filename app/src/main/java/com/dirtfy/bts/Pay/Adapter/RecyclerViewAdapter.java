@@ -32,12 +32,17 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
     @Override
     public Pay_ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.pay_recycler_item, parent, false);
-        return new Pay_ViewHolder(view);
+        Pay_ViewHolder pay_viewHolder = new Pay_ViewHolder(view);
+        return pay_viewHolder;
     }
 
     @Override
     public void onBindViewHolder(@NonNull Pay_ViewHolder holder, int position) {
-
+        holder.tv_startstation.setText(route.getTransitList().get(position).getDepartureStop());
+        holder.tv_starttime.setText(route.getTransitList().get(position).getDepartureTime());
+        holder.tv_arrivetime.setText(route.getTransitList().get(position).getArrivalTime());
+        holder.tv_cost.setText(route.getTransitList().get(position).getCost());
+        holder.tv_type.setText(route.getTransitList().get(position).getType());
     }
 
     @Override
@@ -46,24 +51,19 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
     }
 
     class Pay_ViewHolder extends RecyclerView.ViewHolder{
-        TextView tv_startstation;
-        TextView tv_starttime;
-        TextView tv_arrivetime;
-        TextView tv_cost;
-        TextView tv_type;
+        public TextView tv_startstation;
+        public TextView tv_starttime;
+        public TextView tv_arrivetime;
+        public TextView tv_cost;
+        public TextView tv_type;
 
         public Pay_ViewHolder(@NonNull View itemView) {
             super(itemView);
-
             tv_startstation = itemView.findViewById(R.id.tv_departstation);
             tv_starttime = itemView.findViewById(R.id.start_time);
             tv_arrivetime = itemView.findViewById(R.id.arrive_time);
             tv_cost = itemView.findViewById(R.id.tv_cost);
             tv_type = itemView.findViewById(R.id.tv_type);
-
-            itemView.setOnClickListener(view -> {
-                String postNumber = String.valueOf(route.getTransitList().get(getAdapterPosition()));
-            });
         }
     }
 }

@@ -9,7 +9,6 @@
         android:id="@+id/activity_my_post1_recyclerView"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@color/black"
         tools:listitem="@layout/pay_recycler_item" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

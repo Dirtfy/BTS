@@ -52,10 +52,6 @@ public class Transit {
         return string;
     }
 
-    public String getArrivalStop() {
-        return arrivalStop;
-    }
-
     public String getArrivalTime() {
         return arrivalTime;
     }
@@ -68,27 +64,11 @@ public class Transit {
         return departureTime;
     }
 
-    public String getDistance() {
-        return distance;
-    }
-
-    public String getDuration() {
-        return duration;
-    }
-
     public String getCost() {
         return cost;
     }
 
     public String getType() {
         return type;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public boolean isBooking() {
-        return booking;
     }
 }
