@@ -28,7 +28,8 @@ public class MainActivity extends AppCompatActivity {
     RouteHelper routeHelper;
 
     JSONObject result;
-    ArrayList<Route> routeArrayList;
+
+    public static ArrayList<Route> routeArrayList;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

@@ -6,4 +6,10 @@
     android:layout_height="match_parent"
     tools:context=".routePage.RoutePageActivity">
 
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/route_page_recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:listitem="@layout/route_page_recyclerview_item"/>
+
 </androidx.constraintlayout.widget.ConstraintLayout>
