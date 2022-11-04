@@ -15,6 +15,10 @@ public class Route {
         return transitList;
     }
 
+    public void concatenate(Route other){
+        transitList.addAll(other.transitList);
+    }
+
     @NonNull
     @Override
     public String toString() {

@@ -11,22 +11,28 @@ public class Transit {
 
     String distance;
     String duration;
+    String cost;
 
     String type;
     String name;
 
+    boolean booking;
+
     public Transit(String arrivalStop, String arrivalTime,
                    String departureStop, String departureTime,
-                   String distance, String duration,
-                   String type, String name) {
+                   String distance, String duration, String cost,
+                   String type, String name,
+                   boolean booking) {
         this.arrivalStop = arrivalStop;
         this.arrivalTime = arrivalTime;
         this.departureStop = departureStop;
         this.departureTime = departureTime;
         this.distance = distance;
         this.duration = duration;
+        this.cost = cost;
         this.type = type;
         this.name = name;
+        this.booking = booking;
     }
 
     @NonNull
@@ -40,6 +46,7 @@ public class Transit {
                 "\nduration : "+duration+
                 "\ntype : "+type+
                 "\nname : "+name+
+                "\nbooking : "+booking+
                 "\n\n";
 
         return string;

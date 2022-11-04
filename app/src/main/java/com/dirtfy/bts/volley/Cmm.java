@@ -7,6 +7,7 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.util.ArrayList;
+import java.util.Iterator;
 
 public class Cmm {
 
@@ -44,16 +45,40 @@ public class Cmm {
 
                     String distance = unit.getJSONObject("distance").getString("text");
                     String duration = unit.getJSONObject("duration").getString("text");
+                    String cost = "\\0";
 
                     String type = details.getJSONObject("line").getJSONObject("vehicle").getString("type");
                     String name;
 
-                    if(type.equals("HEAVY_RAIL"))
-                        name = details.getString("trip_short_name");
-                    else
-                        name = details.getJSONObject("line").getString("name");
+                    boolean booking = false;
 
-                    Transit newTransit = new Transit(arrivalStop, arrivalTime, departureStop, departureTime, distance, duration, type, name);
+                    boolean hasShortName = false;
+                    for (Iterator<String> it = details.getJSONObject("line").keys(); it.hasNext(); ) {
+                        String key = it.next();
+
+                        if(key.equals("short_name"))
+                            hasShortName = true;
+                    }
+
+                    if(type.equals("HEAVY_RAIL")) {
+                        name = details.getString("trip_short_name");
+                        booking = true;
+                    }
+                    else if(type.equals("BUS") && hasShortName) {
+                        type = "CITY_BUS";
+                        name = details.getJSONObject("line").getString("name") + " " +
+                                details.getJSONObject("line").getString("short_name");
+                    }
+                    else if(type.equals("SUBWAY"))
+                        name = details.getJSONObject("line").getString("name");
+                    else {
+                        name = details.getJSONObject("line").getString("name");
+                        booking = true;
+                    }
+
+                    Transit newTransit = new Transit(arrivalStop, arrivalTime,
+                            departureStop, departureTime, distance, duration, cost,
+                            type, name, booking);
                     transitList.add(newTransit);
                 }
 
