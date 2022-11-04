@@ -4,6 +4,7 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.FragmentTransaction;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.MenuItem;
@@ -12,6 +13,7 @@ import com.dirtfy.bts.Home.Fragment.Home_Buyticket;
 import com.dirtfy.bts.Home.Fragment.Home_Checkticket;
 import com.dirtfy.bts.R;
 import com.dirtfy.bts.directionsApi.RouteHelper;
+import com.dirtfy.bts.routePage.RoutePageActivity;
 import com.dirtfy.bts.volley.Cmm;
 import com.dirtfy.bts.volley.Route;
 import com.dirtfy.bts.volley.Transit;
@@ -43,6 +45,8 @@ public class MainActivity extends AppCompatActivity {
                 Route route = routeArrayList.get(i);
                 Log.d("Dirtfy_test", "\n#"+i+"\n"+route.toString());
             }
+            Intent it = new Intent(this, RoutePageActivity.class);
+            startActivity(it);
         } catch (JSONException e) {
             e.printStackTrace();
         }
