@@ -3,6 +3,8 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Project/BTS/app/src/main/res/layout/activity_main.xml" value="0.25364583333333335" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/BTS/app/src/main/res/layout/fragment_oneway.xml" value="0.2" />
         <entry key="..\:/Users/user/BTS/app/src/main/res/layout/activity_main.xml" value="0.1" />
         <entry key="..\:/Users/user/BTS/app/src/main/res/layout/activity_pay.xml" value="0.24114583333333334" />
         <entry key="..\:/Users/user/BTS/app/src/main/res/layout/fragment_buyticket.xml" value="0.15028901734104047" />

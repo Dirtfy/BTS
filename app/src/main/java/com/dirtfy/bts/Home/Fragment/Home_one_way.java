@@ -17,7 +17,7 @@ public class Home_one_way extends Fragment {
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        view = inflater.inflate(R.layout.fragment_checkticket, container, false);
+        view = inflater.inflate(R.layout.fragment_oneway, container, false);
         return view;
     }
 }
