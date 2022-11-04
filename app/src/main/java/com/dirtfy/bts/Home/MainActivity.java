@@ -10,15 +10,19 @@ import android.view.MenuItem;
 import com.dirtfy.bts.Home.Fragment.Home_Buyticket;
 import com.dirtfy.bts.Home.Fragment.Home_Checkticket;
 import com.dirtfy.bts.R;
+import com.dirtfy.bts.directionsApi.RouteHelper;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 public class MainActivity extends AppCompatActivity {
     BottomNavigationView main_bottom;
     FragmentTransaction fragmentTransaction;
+    RouteHelper routeHelper;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        routeHelper = new RouteHelper();
+        routeHelper.sendClick("광화문", "서울시청");
 
         main_bottom = findViewById(R.id.bottomNavigationView);
         main_bottom.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
