@@ -37,7 +37,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        routeHelper = new RouteHelper();
+        /*routeHelper = new RouteHelper();
         try {
             result = new JSONObject(routeHelper.sendClick("동대구역", "철원"));
             routeArrayList = Cmm.getRoutes(result);
@@ -49,7 +49,7 @@ public class MainActivity extends AppCompatActivity {
             startActivity(it);
         } catch (JSONException e) {
             e.printStackTrace();
-        }
+        }*/
 
         main_bottom = findViewById(R.id.bottomNavigationView);
         main_bottom.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
