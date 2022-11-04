@@ -37,6 +37,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        routeArrayList = new ArrayList<>();
         /*routeHelper = new RouteHelper();
         try {
             result = new JSONObject(routeHelper.sendClick("동대구역", "철원"));
